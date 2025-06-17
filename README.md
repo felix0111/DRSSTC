@@ -6,7 +6,7 @@ Some connections, layouts, soldering practices etc. found in this documentation 
 ---
 
 Everything basically started when I saw some videos of Tesla Coils on youtube. Specifically the Dual-Resonant and Vacuum-Tube Tesla Coil really sparked my interest.
-So I started to think about how to wind the secondary coil and then build everything upon that.  
+So I wanted to make my own Tesla coil and thus I decided to just wind a secondary coil and then build everything upon that.  
 
 My father had an old lathe which I could use, the problem is that at its lowest setting it still rotated too fast. My idea was to use the clamps of the lathe to hold a stepper motor which will rotate the pipe. A custom 3D printed part connected the motor and the pipe.
 The stepper motor was controlled by a dedicated stepper motor controller board in combination with an arduino and a potentiometer. Sadly I dont have any code or schematics regarding this circuit anymore, just a picture of the stepper motor.  
@@ -56,10 +56,12 @@ The H-Bridge is supplied by a capacitor bank made up of multiple 400V 470uF low 
 2 packages of 4 parallel 2kV 0.047uF capacitors are in series with the primary coil. The resulting total capacitance of 0.094uF seemed to bring the best results. I should probably solder them together at some point..  
 <img src="https://github.com/user-attachments/assets/7b3c96eb-5ee9-404d-82b3-002ccd50e698" width="500">
 
-The primary coil also got upgraded to a copper pipe with a diameter of 1cm. The fixtures for the pipe are 3D printed. This allows for finetuning the primary resonant frequency.  
+The primary coil also got upgraded to a copper pipe with a diameter of 1cm. The fixtures for the pipe are 3D printed. Having a bare metal coil allows for finetuning the primary resonant frequency but also brings the risk of the secondary arcing to the primary.
+To counteract this, I also added an additional pipe on the outer edge of the primary. This pipe is directly connected to ground.
 <img src="https://github.com/user-attachments/assets/ae027b5d-4b96-4669-932b-6b9aedc581db" width="500">
 
 Two cascading current transformers (with each cascade having ~30 turns) provide a signal for the drivers "over current detection" and feedback for switching at the zero crossings of the oscillation. Zero crossing is absolutely necessary for high power switching as it reduces the losses of the H-Bridge to ideally zero (and I think it increases the lifetime).  
+The cores for the current transformers are basically just a smaller version of the GDT core. B64290L0615 is the exact name of the ferrite core. Again, the permeability is important for correct functionality. Using a random core will likely give bad signals.
 <img src="https://github.com/user-attachments/assets/473522c6-8707-4c53-9e2e-0cbf2ecee373" width="500">
 
 After some extensive testing at lower voltages, I just couldnt get the Tesla coil to run without an external feedback signal so I kept using the signal generator. At some point I pushed the supply voltage up to mains voltage (230V). With a triple breakout point the following picture was taken.  
