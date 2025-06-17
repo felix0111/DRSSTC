@@ -15,7 +15,7 @@ The stepper motor was controlled by a dedicated stepper motor controller board i
 The support of the secondary coil is a sewer pipe with a radius of 8cm and height of 58cm. I decided to use magnet wire with a diameter of 0.04cm.
 After around two hours ~1450 turns have been wound onto the pipe. This should be equal to about 729 meter of wire. After that, I sprayed the coil with clear varnish spray to reinforce and fixate the magnet wire onto the pipe.
 
-After that, I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.
+After that, I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.  
 <img src="https://github.com/user-attachments/assets/eebd75e9-317b-444d-83da-b1b310d700f2" width="300">
 
 For the secondary coil I used some insulated wire I had laying around. 
