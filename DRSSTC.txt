@@ -1,0 +1,168 @@
+J A V A T C version 13.1 - CONSOLIDATED OUTPUT
+22.6.2024, 17:53:26
+
+Units = Centimeters
+Ambient Temp = 30°C
+
+----------------------------------------------------
+Surrounding Inputs:
+----------------------------------------------------
+200 = Ground Plane Radius
+200 = Wall Radius
+300 = Ceiling Height
+
+----------------------------------------------------
+Secondary Coil Inputs:
+----------------------------------------------------
+Current Profile = G.PROFILE_LOADED
+8 = Radius 1
+8 = Radius 2
+25 = Height 1
+83 = Height 2
+1450 = Turns
+0.04 = Wire Diameter
+
+----------------------------------------------------
+Primary Coil Inputs:
+----------------------------------------------------
+Round Primary Conductor
+13 = Radius 1
+22 = Radius 2
+25 = Height 1
+25 = Height 2
+7 = Turns
+1 = Wire Diameter
+0 = Ribbon Width 
+0 = Ribbon Thickness 
+0.094 = Primary Cap (uF)
+0 = Total Lead Length
+0 = Lead Diameter
+
+----------------------------------------------------
+Top Load Inputs:
+----------------------------------------------------
+Toroid #1: minor=11, major=51, height=92, topload
+
+----------------------------------------------------
+Secondary Outputs:
+----------------------------------------------------
+109.3 kHz = Secondary Resonant Frequency
+90 deg° = Angle of Secondary
+58 cm = Length of Winding
+25 cm = Turns Per Unit
+0 mm = Space Between Turns (edge to edge)
+728.85 m = Length of Wire
+3.63:1 = H/D Aspect Ratio
+103.0847 Ohms = DC Resistance
+54992 Ohms = Reactance at Resonance
+0.814 kg = Weight of Wire
+80.075 mH = Les-Effective Series Inductance
+84.103 mH = Lee-Equivalent Energy Inductance
+82.197 mH = Ldc-Low Frequency Inductance
+26.479 pF = Ces-Effective Shunt Capacitance
+25.211 pF = Cee-Equivalent Energy Capacitance
+41.074 pF = Cdc-Low Frequency Capacitance
+0.2123 mm = Skin Depth
+20.227 pF = Topload Effective Capacitance
+194.2882 Ohms = Effective AC Resistance
+283 = Q
+
+----------------------------------------------------
+Primary Outputs:
+----------------------------------------------------
+105.49 kHz = Primary Resonant Frequency
+3.48 % high = Percent Detuned
+0 deg° = Angle of Primary
+769.69 cm = Length of Wire
+1.76 mOhms = DC Resistance
+0.286 cm = Average spacing between turns (edge to edge)
+4.48 cm = Proximity between coils
+0 cm = Recommended minimum proximity between coils
+24.213 µH = Ldc-Low Frequency Inductance
+0.08757 µF = Cap size needed with Primary L (reference)
+0 µH = Lead Length Inductance
+211.644 µH = Lm-Mutual Inductance
+0.15 k = Coupling Coefficient
+0.136 k = Recommended Coupling Coefficient
+6.67  = Number of half cycles for energy transfer at K
+31.15 µs = Time for total energy transfer (ideal quench time)
+
+----------------------------------------------------
+Transformer Inputs:
+----------------------------------------------------
+0 [volts] = Transformer Rated Input Voltage
+0 [volts] = Transformer Rated Output Voltage
+0 [mA] = Transformer Rated Output Current
+0 [Hz] = Mains Frequency
+0 [volts] = Transformer Applied Voltage
+0 [amps] = Transformer Ballast Current
+
+----------------------------------------------------
+Transformer Outputs:
+----------------------------------------------------
+0 [volt*amps] = Rated Transformer VA
+0 [ohms] = Transformer Impedence
+0 [rms volts] = Effective Output Voltage
+0 [rms amps] = Effective Transformer Primary Current
+0 [rms amps] = Effective Transformer Secondary Current
+0 [volt*amps] = Effective Input VA
+0 [uF] = Resonant Cap Size
+0 [uF] = Static gap LTR Cap Size
+0 [uF] = SRSG LTR Cap Size
+0 [uF] = Power Factor Cap Size
+0 [peak volts] = Voltage Across Cap
+0 [peak volts] = Recommended Cap Voltage Rating
+0 [joules] = Primary Cap Energy
+0 [peak amps] = Primary Instantaneous Current
+0 [cm] = Spark Length (JF equation using Resonance Research Corp. factors)
+0 [peak amps] = Sec Base Current
+
+----------------------------------------------------
+Rotary Spark Gap Inputs:
+----------------------------------------------------
+0 = Number of Stationary Gaps
+0 = Number of Rotating Electrodes
+0 [rpm] = Disc RPM
+0 = Rotating Electrode Diameter
+0 = Stationary Electrode Diameter
+0 = Rotating Path Diameter
+
+----------------------------------------------------
+Rotary Spark Gap Outputs:
+----------------------------------------------------
+0 = Presentations Per Revolution
+0 [BPS] = Breaks Per Second
+0 [kmh] = Rotational Speed
+0 [ms] = RSG Firing Rate
+0 [ms] = Time for Capacitor to Fully Charge
+0 = Time Constant at Gap Conduction
+0 [µs] = Electrode Mechanical Dwell Time
+0 [%] = Percent Cp Charged When Gap Fires
+0 [peak volts] = Effective Cap Voltage
+0 [joules] = Effective Cap Energy
+0 [peak volts] = Terminal Voltage
+0 [power] = Energy Across Gap
+0 [cm] = RSG Spark Length (using energy equation)
+
+----------------------------------------------------
+Static Spark Gap Inputs:
+----------------------------------------------------
+0 = Number of Electrodes
+0 [cm] = Electrode Diameter
+0 [cm] = Total Gap Spacing
+
+----------------------------------------------------
+Static Spark Gap Outputs:
+----------------------------------------------------
+0 [cm] = Gap Spacing Between Each Electrode
+0 [peak volts] = Charging Voltage
+0 [peak volts] = Arc Voltage
+0 [volts] = Voltage Gradient at Electrode
+0 [volts/cm] = Arc Voltage per unit
+0 [%] = Percent Cp Charged When Gap Fires
+0 [ms] = Time To Arc Voltage
+0 [BPS] = Breaks Per Second
+0 [joules] = Effective Cap Energy
+0 [peak volts] = Terminal Voltage
+0 [power] = Energy Across Gap
+0 [cm] = Static Gap Spark Length (using energy equation)
