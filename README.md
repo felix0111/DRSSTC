@@ -18,11 +18,10 @@ After around two hours ~1450 turns have been wound onto the pipe. This should be
 After that, I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.
 <img src="https://github.com/user-attachments/assets/eebd75e9-317b-444d-83da-b1b310d700f2" width="300">
 
-For the secondary coil I used some insulated wires I had laying around. 
-No animals were harmed in the making of this coil!! :)  
+For the secondary coil I used some insulated wire I had laying around. 
+No cats were harmed in the making of this coil!! :)  
 <img src="https://github.com/user-attachments/assets/8aaca457-dc67-4f6c-a0ea-3e8ae3afca29" width="700">
-
-<img src="https://github.com/user-attachments/assets/15d911c9-518f-4f77-ab18-4410c84a854a" width="350">
+<img src="https://github.com/user-attachments/assets/15d911c9-518f-4f77-ab18-4410c84a854a" width="400">
 
 The topload is just a piece of flexible aluminum duct.  
 <img src="https://github.com/user-attachments/assets/2bf020bf-ed73-4cd9-889f-ac2920f95573" width="400">
@@ -46,10 +45,10 @@ The supply voltages for the logic, Gate-Driver and H-Bridge come from the 3 buck
 At this point a new and powerful IGBT H-Brige (CM75BU-12H) switched the primary coil.  
 <img src="https://github.com/user-attachments/assets/462d847a-3c77-4a6b-96f6-f074dd235362" width="400">
 
-The H-Bridge with the GDT and driver.  
+The H-Bridge is mounted on a big heatsink from an old cooler I had laying around. Its probably overkill but it never got anywhere close to warm. A newly wound GDT (same ferrite core as before) is connected to the side of the H-Bridge, not for cooling purposes but just for practical reasons.  
 <img src="https://github.com/user-attachments/assets/0aee1eed-ed56-40f9-aaf6-4fb5ed0ad7ae" width="1000">
 
-The H-Bridge is supplied by a capacitor bank made up of multiple 400V 470uF low ESR electrolytic capacitors connected to a 1.2kV 100A three-phase rectifier. An autotransformer provides an adjustable (mains) voltage, necessary to not blow up everything all the time.  
+The H-Bridge is supplied by a capacitor bank made up of multiple 400V 470uF low ESR electrolytic capacitors connected to a 1.2kV 100A three-phase rectifier. An autotransformer (specifications unknown) provides an adjustable (mains) voltage, necessary to not blow up everything all the time.  
 <img src="https://github.com/user-attachments/assets/0b7107fa-f0fd-45c6-bbcb-86cbc91a9439" width="600">  
 <img src="https://github.com/user-attachments/assets/09ff6351-9c8f-4efd-9a71-58c4c4ca7f25" width="500"><img src="https://github.com/user-attachments/assets/abed4421-1ddc-49f7-9921-b0a4d0bd2392" width="500">  
 <img src="https://github.com/user-attachments/assets/e28ec7de-879b-43da-8e18-57512f332b4d" width="400">
@@ -60,7 +59,7 @@ The H-Bridge is supplied by a capacitor bank made up of multiple 400V 470uF low 
 The primary coil also got upgraded to a copper pipe with a diameter of 1cm. The fixtures for the pipe are 3D printed. This allows for finetuning the primary resonant frequency.  
 <img src="https://github.com/user-attachments/assets/ae027b5d-4b96-4669-932b-6b9aedc581db" width="500">
 
-Two current transformers provide a signal for the drivers "over current detection" and feedback for switching at the zero crossings of the oscillation.  
+Two cascading current transformers (with each cascade having ~30 turns) provide a signal for the drivers "over current detection" and feedback for switching at the zero crossings of the oscillation. Zero crossing is absolutely necessary for high power switching as it reduces the losses of the H-Bridge to ideally zero (and I think it increases the lifetime).  
 <img src="https://github.com/user-attachments/assets/473522c6-8707-4c53-9e2e-0cbf2ecee373" width="500">
 
 After some extensive testing at lower voltages, I just couldnt get the Tesla coil to run without an external feedback signal so I kept using the signal generator. At some point I pushed the supply voltage up to mains voltage (230V). With a triple breakout point the following picture was taken.  
