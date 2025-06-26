@@ -8,17 +8,13 @@ Some connections, layouts, soldering practices etc. found in this documentation 
 Everything basically started when I saw some videos of Tesla Coils on youtube. Specifically the Dual-Resonant and Vacuum-Tube Tesla Coil really sparked my interest.
 So I wanted to make my own Tesla coil and thus I decided to just wind a secondary coil and then build everything upon that.  
 
-My father had an old lathe which I could use, the problem is that at its lowest setting it still rotated too fast. My idea was to use the clamps of the lathe to hold a stepper motor which will rotate the pipe. A custom 3D printed part connected the motor and the pipe.
-The stepper motor was controlled by a dedicated stepper motor controller board in combination with an arduino and a potentiometer. Sadly I dont have any code or schematics regarding this circuit anymore, just a picture of the stepper motor.  
-<img src="https://github.com/user-attachments/assets/065ae7b0-6344-4475-9713-63bef44d2d6d" width="300">
-
-The support of the secondary coil is a sewer pipe with a radius of 8cm and height of 58cm. I decided to use magnet wire with a diameter of 0.04cm.
-After around two hours ~1450 turns have been wound onto the pipe. This should be equal to about 729 meter of wire. After that, I sprayed the coil with clear varnish spray to reinforce and fixate the magnet wire onto the pipe.
+Because the secondary coil normally has hundreds to thousands of turns, I used a lathe to wind magnet wire with a diameter of 0.04cm onto a sewer pipe (r=8cm, h=58cm).  
+After around two hours ~1450 turns have been wound onto the pipe. This should be equal to about 729 meter of wire. After that, I sprayed the coil with clear varnish spray to reinforce and fixate the magnet wire onto the pipe.  
 
 After that, I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.  
 <img src="https://github.com/user-attachments/assets/eebd75e9-317b-444d-83da-b1b310d700f2" width="300">
 
-For the secondary coil I used some insulated wire I had laying around. 
+For the primary coil I used some insulated wire I had laying around. 
 No cats were harmed in the making of this coil!! :)  
 <img src="https://github.com/user-attachments/assets/8aaca457-dc67-4f6c-a0ea-3e8ae3afca29" width="700">
 <img src="https://github.com/user-attachments/assets/15d911c9-518f-4f77-ab18-4410c84a854a" width="400">
@@ -42,6 +38,10 @@ After testing around and having fun with the Tesla coil, I built a completely ne
 The supply voltages for the logic, Gate-Driver and H-Bridge come from the 3 buck converters. 5V, 9V and 18V respectively.  
 <img src="https://github.com/user-attachments/assets/3f9f78fd-7fcd-470b-9985-c00ace5bc853" width="600">
 
+The new driver also had an input for a PWM interrupter signal which enables/disables the GDT driver circuit. This is very useful for reducing the overall load on the primary coil H-Bridge as it only allows oscillations for a very short time.  
+For generating the interrupter signal I built a handhheld PWM signal generator with variable duty cycle and frequency.  
+<img src="https://github.com/user-attachments/assets/44cd6d25-1a12-461c-9610-bcf290102d52" width="400">
+
 At this point a new and powerful IGBT H-Brige (CM75BU-12H) switched the primary coil.  
 <img src="https://github.com/user-attachments/assets/462d847a-3c77-4a6b-96f6-f074dd235362" width="400">
 
@@ -52,6 +52,10 @@ The H-Bridge is supplied by a capacitor bank made up of multiple 400V 470uF low 
 <img src="https://github.com/user-attachments/assets/0b7107fa-f0fd-45c6-bbcb-86cbc91a9439" width="600">  
 <img src="https://github.com/user-attachments/assets/09ff6351-9c8f-4efd-9a71-58c4c4ca7f25" width="500"><img src="https://github.com/user-attachments/assets/abed4421-1ddc-49f7-9921-b0a4d0bd2392" width="500">  
 <img src="https://github.com/user-attachments/assets/e28ec7de-879b-43da-8e18-57512f332b4d" width="400">
+
+The problem with this big autotransformer is that it sometimes trips the circuit breaker because of its huge inrush current. To fix this, I built a starter which puts a 3kOhm power resistor in series to the autotransformer for the first second.  
+The circuit works by charging a capacitor which makes the LM311P comparator toggle a relay after a certain threshold. The relay then shorts the resistor.  
+<img src="https://github.com/user-attachments/assets/6de5b74f-bb37-4249-8b5a-e60e144e18a2" width="400">
 
 2 packages of 4 parallel 2kV 0.047uF capacitors are in series with the primary coil. The resulting total capacitance of 0.094uF seemed to bring the best results. I should probably solder them together at some point..  
 <img src="https://github.com/user-attachments/assets/7b3c96eb-5ee9-404d-82b3-002ccd50e698" width="500">
@@ -74,5 +78,9 @@ End result? The destruction of the beefy H-Bridge which I didnt even notice at f
 
 ---
 
-After 2 years of frustration while trying to get the feedback to work (and some long breaks from this project), I built a new driver again. This time the Universal DRSSTC Driver 2.7 Rev C from [loneoceans.com](https://loneoceans.com/labs/ud27/) which also originates from Steve Ward. 
+After 2 years of frustration while trying to get the feedback to work (and some long breaks from this project), I built a new driver again. This time the Universal DRSSTC Driver 2.7 Rev C from [loneoceans.com](https://loneoceans.com/labs/ud27/) which also originates from Steve Ward.  
+<img src="https://github.com/user-attachments/assets/7c58477c-972c-4426-9ae1-907cbdedfe25" width="600">
+
+I reused the 3 buck converters because they worked pretty good.
+
 # WORK IN PROGRESS
