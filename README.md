@@ -3,7 +3,7 @@
 <img src="https://github.com/user-attachments/assets/98e42ae9-a365-4b6a-a306-cb31d6c1659c" width="300">
 
 This repo is just for documentation purposes of my private project regarding the construction of a Dual-Resonant-Tesla-Coil.  
-Some connections, layouts, soldering practices etc. found in this documentation might be less than ideal, this is not meant to be used as an example on how to do things. Working with high voltages can be deadly, especially autotransformers without isolation transformers and tesla coils with a low resonant frequency. See also "skin effect".
+Some connections, layouts, soldering practices etc. found in this documentation might be less than ideal, this is not meant to be used as an example on how to do things. Working with high voltages can be deadly, especially autotransformers without isolation transformers and tesla coils with a low resonant frequency. See also [skin effect](https://en.wikipedia.org/wiki/Skin_effect).
 
 ---
 
