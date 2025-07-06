@@ -1,7 +1,9 @@
 # DRSSTC - WORK IN PROGRESS
 
+<img src="https://github.com/user-attachments/assets/98e42ae9-a365-4b6a-a306-cb31d6c1659c" width="300">
+
 This repo is just for documentation purposes of my private project regarding the construction of a Dual-Resonant-Tesla-Coil.  
-Some connections, layouts, soldering practices etc. found in this documentation might be less than ideal, this is not meant to be used as an example on how to do things.  
+Some connections, layouts, soldering practices etc. found in this documentation might be less than ideal, this is not meant to be used as an example on how to do things. Working with high voltages can be deadly, especially autotransformers without isolation transformers and tesla coils with a low resonant frequency. See also "skin effect".
 
 ---
 
@@ -11,7 +13,7 @@ So I wanted to make my own Tesla coil and thus I decided to just wind a secondar
 Because the secondary coil normally has hundreds to thousands of turns, I used a lathe to wind magnet wire with a diameter of 0.04cm onto a sewer pipe (r=8cm, h=58cm).  
 After around two hours ~1450 turns have been wound onto the pipe. This should be equal to about 729 meter of wire. After that, I sprayed the coil with clear varnish spray to reinforce and fixate the magnet wire onto the pipe.  
 
-After that, I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.  
+Then I constructed the base of the whole Tesla coil. I just used two thin wood boards separated by 4 wooden sticks.  
 <img src="https://github.com/user-attachments/assets/eebd75e9-317b-444d-83da-b1b310d700f2" width="300">
 
 For the primary coil I used some insulated wire I had laying around. 
@@ -34,7 +36,7 @@ At this point, there was no feedback in any way so I used a cheap signal generat
 I found that at a frequency of 125kHz, the sparks were the biggest which hints to a secondary resonant frequency of around 125kHz. The breakout point is just a big wood screw leaning against the topload.  
 <img src="https://github.com/user-attachments/assets/4b07cd5a-52c4-4e1b-8f63-08333e77891e" width="500"><img src="https://github.com/user-attachments/assets/99589b24-f95f-477a-ba6b-7aae404a2fc1" width="500">
 
-After testing around and having fun with the Tesla coil, I built a completely new, more robust and feedback-capable driver. The following driver is basically the UD1.3b DRSSTC driver from Steve Ward with some small additions like LEDs for showing the state of each Gate-Driver. An additional H-Bridge between Gate-Drivers and GDT allowed for more power.  
+After testing around and having fun with the Tesla coil, I built a completely new, more robust and feedback-capable driver. The following driver is basically the UD1.3b DRSSTC driver from [Steve Ward (reposted by Kaizer Power Electronics)](https://kaizerpowerelectronics.dk/tesla-coils/universal-driver-1-3b/) with some small additions like LEDs for showing the state of each Gate-Driver. An additional H-Bridge between Gate-Drivers and GDT allowed for more power.  
 The supply voltages for the logic, Gate-Driver and H-Bridge come from the 3 buck converters. 5V, 9V and 18V respectively.  
 <img src="https://github.com/user-attachments/assets/3f9f78fd-7fcd-470b-9985-c00ace5bc853" width="600">
 
@@ -64,7 +66,7 @@ The primary coil also got upgraded to a copper pipe with a diameter of 1cm. The 
 To counteract this, I also added an additional pipe on the outer edge of the primary. This pipe is directly connected to ground.  
 <img src="https://github.com/user-attachments/assets/ae027b5d-4b96-4669-932b-6b9aedc581db" width="500">
 
-Two cascading current transformers (with each cascade having ~30 turns) provide a signal for the drivers "over current detection" and feedback for switching at the zero crossings of the oscillation. Zero crossing is absolutely necessary for high power switching as it reduces the losses of the H-Bridge to ideally zero (and I think it increases the lifetime).  
+Two cascading current transformers (with each cascade having ~30 turns) provide a signal for the drivers "over current detection" and feedback for switching at the zero crossings of the primary. Zero crossing is absolutely necessary for high power switching as it reduces the losses of the H-Bridge to ideally zero.  
 The cores for the current transformers are basically just a smaller version of the GDT core. B64290L0615 is the exact name of the ferrite core. Again, the permeability is important for correct functionality. Using a random core will likely give bad signals.  
 <img src="https://github.com/user-attachments/assets/473522c6-8707-4c53-9e2e-0cbf2ecee373" width="500">
 
@@ -80,7 +82,21 @@ End result? The destruction of the beefy H-Bridge which I didnt even notice at f
 
 After 2 years of frustration while trying to get the feedback to work (and some long breaks from this project), I built a new driver again. This time the Universal DRSSTC Driver 2.7 Rev C from [loneoceans.com](https://loneoceans.com/labs/ud27/) which also originates from Steve Ward.  
 <img src="https://github.com/user-attachments/assets/7c58477c-972c-4426-9ae1-907cbdedfe25" width="600">
+<img src="https://loneoceans.com/labs/ud27/UD27Cschematic.png" width="600">
 
-I reused the 3 buck converters because they worked pretty good.
+This driver has a more robust zero crossing detection by using a high-speed comparator and also allows phase shifting the signal from the current transformer.  
+To find the correct inductor I measured the waveform of the primary coil (blue) and the H-Bridge gate signal (yellow) and then just tested random inductors until the gates are switched at the zero crossing of the primary coil.  
+
+<img src="https://github.com/user-attachments/assets/51d4b159-7228-4abc-b075-02ff6f203e07" width="500">  
+
+No inductor, switching too late
+
+<img src="https://github.com/user-attachments/assets/da62e0b6-6926-438f-aa02-9723609279d8" width="500">  
+
+Inductor 1, switching too soon
+
+<img src="https://github.com/user-attachments/assets/03442baa-5e4c-4852-8805-c2c36070b2aa" width="500">  
+
+Inductor 2, switching exactly on the zero crossing
 
 # WORK IN PROGRESS
